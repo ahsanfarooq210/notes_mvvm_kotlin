@@ -5,6 +5,7 @@
       <map>
         <entry key="..\:/PROGRAMN CREATED/ANDROID/notes_mvvm_kotlin/app/src/main/res/drawable-v24/no_btn.xml" value="0.2630208333333333" />
         <entry key="..\:/PROGRAMN CREATED/ANDROID/notes_mvvm_kotlin/app/src/main/res/drawable/btn_filter_shape.xml" value="0.2630208333333333" />
+        <entry key="..\:/PROGRAMN CREATED/ANDROID/notes_mvvm_kotlin/app/src/main/res/drawable/delete_sheet.xml" value="0.2630208333333333" />
         <entry key="..\:/PROGRAMN CREATED/ANDROID/notes_mvvm_kotlin/app/src/main/res/drawable/edit_text_shape.xml" value="0.2630208333333333" />
         <entry key="..\:/PROGRAMN CREATED/ANDROID/notes_mvvm_kotlin/app/src/main/res/drawable/green_dot.xml" value="0.2630208333333333" />
         <entry key="..\:/PROGRAMN CREATED/ANDROID/notes_mvvm_kotlin/app/src/main/res/drawable/red_dot.xml" value="0.2630208333333333" />
@@ -15,8 +16,9 @@
         <entry key="..\:/PROGRAMN CREATED/ANDROID/notes_mvvm_kotlin/app/src/main/res/layout/dialog_delete.xml" value="0.246875" />
         <entry key="..\:/PROGRAMN CREATED/ANDROID/notes_mvvm_kotlin/app/src/main/res/layout/fragment_create_notes.xml" value="0.246875" />
         <entry key="..\:/PROGRAMN CREATED/ANDROID/notes_mvvm_kotlin/app/src/main/res/layout/fragment_edit_notes.xml" value="0.1671875" />
-        <entry key="..\:/PROGRAMN CREATED/ANDROID/notes_mvvm_kotlin/app/src/main/res/layout/fragment_home.xml" value="0.1671875" />
+        <entry key="..\:/PROGRAMN CREATED/ANDROID/notes_mvvm_kotlin/app/src/main/res/layout/fragment_home.xml" value="0.2" />
         <entry key="..\:/PROGRAMN CREATED/ANDROID/notes_mvvm_kotlin/app/src/main/res/layout/iitem_notes.xml" value="0.246875" />
+        <entry key="..\:/PROGRAMN CREATED/ANDROID/notes_mvvm_kotlin/app/src/main/res/menu/delete_menu.xml" value="0.246875" />
       </map>
     </option>
   </component>

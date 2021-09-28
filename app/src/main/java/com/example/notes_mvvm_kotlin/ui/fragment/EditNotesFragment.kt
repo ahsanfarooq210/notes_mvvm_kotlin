@@ -2,10 +2,9 @@ package com.example.notes_mvvm_kotlin.ui.fragment
 
 import android.os.Bundle
 import android.text.format.DateFormat
+import android.view.*
+import android.widget.TextView
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.navigation.Navigation
@@ -14,6 +13,7 @@ import com.example.notes_mvvm_kotlin.Model.Notes
 import com.example.notes_mvvm_kotlin.R
 import com.example.notes_mvvm_kotlin.ViewModel.NotesViewModel
 import com.example.notes_mvvm_kotlin.databinding.FragmentEditNotesBinding
+import com.google.android.material.bottomsheet.BottomSheetDialog
 import java.util.*
 
 
@@ -31,6 +31,7 @@ class EditNotesFragment : Fragment()
     {
         binding= FragmentEditNotesBinding.inflate(layoutInflater,container,false)
         // Inflate the layout for this fragment
+        setHasOptionsMenu(true)
 
         binding.editTitle.setText(notes.data.title)
         binding.editSubtitle.setText(notes.data.subTitle)
@@ -102,6 +103,37 @@ class EditNotesFragment : Fragment()
 
         Navigation.findNavController(it!!).navigate(R.id.action_editNotesFragment_to_homeFragment)
 
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater)
+    {
+        inflater.inflate(R.menu.delete_menu,menu)
+        super.onCreateOptionsMenu(menu, inflater)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean
+    {
+        if(item.itemId==R.id.menu_delete)
+        {
+            val botomSHeet:BottomSheetDialog= BottomSheetDialog(requireContext(),R.style.BottomSheetStyle)
+            botomSHeet.setContentView(R.layout.dialog_delete)
+
+            val textViewYes=botomSHeet.findViewById<TextView>(R.id.dialog_yes)
+            val textViewNo=botomSHeet.findViewById<TextView>(R.id.dialog_no)
+
+            textViewYes?.setOnClickListener {
+                viewModel.deleteNotes(notes.data.id!!)
+                Navigation.findNavController(it!!).navigate(R.id.action_editNotesFragment_to_homeFragment)
+            }
+
+            textViewNo?.setOnClickListener {
+                botomSHeet.dismiss()
+            }
+
+            botomSHeet.show()
+
+        }
+        return super.onOptionsItemSelected(item)
     }
 
 }

@@ -54,6 +54,13 @@ class HomeFragment : Fragment()
         binding.btnAddNotes.setOnClickListener{
             Navigation.findNavController(it).navigate(R.id.action_homeFragment_to_createNotesFragment)
         }
+
+        binding.allNotes.setOnClickListener {
+            viewModel.getNotes().observe(viewLifecycleOwner,{notesList ->
+                binding.rcvAllNotes.layoutManager=GridLayoutManager(requireContext(),2)
+                binding.rcvAllNotes.adapter=NotesAdapter(requireContext(),notesList)
+            })
+        }
         return binding.root
     }
 
